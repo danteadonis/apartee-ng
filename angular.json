@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "apartee-ng"
+    }
+  },
+  "defaultProject": "apartee-ng",
+  "cli": {
+    "analytics": "7420d134-15d4-42af-8711-0315525ff7a7"
+  }
 }
