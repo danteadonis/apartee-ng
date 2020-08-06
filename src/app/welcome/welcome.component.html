@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div [ngStyle]="{'maxHeight': '100%'}">
+  <div id="logoImg" class="text-center">
+    <img [src]="welcomeLogo" alt="apartee logo">
+  </div>
+  <div class="text-center"><h6>Welcome to {{ title }}</h6></div>
+  <br>
+  <img id="mainImg" class="text-center" [src]="bgImg" alt="welcome image">
+  <div class="text-center">
+    <!-- FUNNY BEHAVIOR INITIALLY WHEN ROUTING BUT IT WORKS  -->
+    <a routerLink="intro-slide">
+      <button id="startBtn">Get Started</button>
+    </a>
+  </div>
+</div>

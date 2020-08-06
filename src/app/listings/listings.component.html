@@ -1,0 +1,53 @@
+<!-- YELLOW TOP -->
+<div id="top" class="d-flex py-3 px-4">
+  <div>
+    <div class="text-muted h6">Lorem ipsum dolor sit.</div>
+    <p class="h6"><b>Filter</b></p>
+  </div>
+  <div class="float-right ml-auto">
+    <img id="logoImg" [src]="logoImg" [alt]="logoName">
+  </div>
+</div>
+
+<!-- SEARCH AND OTHER INFO -->
+<div id="listingsBody" class="container">
+  <div class="d-flex mb-3">
+    <div id="left" class="float-left mr-auto">
+      <h6 id="mainText" class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, qui.</h6>
+      <span class="text-danger mr-2"><i class="fas fa-search"></i></span><input type="search" class="px-4" placeholder="Search">
+    </div>
+    <div class="float-right ml-auto"><i class="text-muted fas fa-th-large"></i></div>
+  </div>
+  
+  <!-- MAIN CONTENT -->
+  <div class="row row-cols-2">
+    <div *ngFor="let house of houses" class="col-md-6 col-sm-6">
+      <div class="card my-2">
+        <img [src]="house.apartmentImg" [alt]="house.imgDesc" class="card-img-top">
+        <div *ngIf="house.premium" id="premium" class="text-center text-light">Premium</div>
+        <div class="card-body">
+          <div class="card-text">
+            {{ house.apartmentDesc }}
+            <p class="d-flex mt-4">
+              <span class="float-left text-danger"><i class="fas fa-circle"></i> NEW</span>
+              <span class="float-right ml-auto">
+                <button class="seeDetails">See Details</button>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="text-danger mt-2"><b>Lorem ipsum dolor sit amet.</b></p>
+  <div class="text-muted">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque?
+  </div>
+</div>
+
+<!-- PAGINATION FOOTER -->
+<div id="footer" class="d-flex mt-4 pt-2">
+  <i class="fas fa-arrow-left mr-4"></i>
+  <div id="pageNums" class="mx-4">Page 1 of 100</div>
+  <i class="fas fa-arrow-right ml-4"></i>
+</div>

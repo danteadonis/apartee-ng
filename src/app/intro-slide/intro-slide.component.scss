@@ -1,0 +1,74 @@
+
+$indicatorFilled: #ffcc2a;
+$indicatorHover: #ffee4c;
+$indicatorEmpty: #eee;
+$hoveredText: #444;
+
+#parent{
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+
+  .carousel{
+    .carousel-indicators li{
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+  
+    .carousel-indicators li.active{
+      background-color: $indicatorFilled;
+    }
+  
+    .carousel-inner{
+      transform-style: preserve-3d;
+  
+      .carousel-caption{
+        color: $indicatorFilled;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: initial;
+      }
+  
+      .carousel-item, .carousel-item.active{
+        img{
+          width: 100vw;
+          height: 100vh;
+        }
+        .overlay{
+          position: absolute;
+          // display: none;
+          width: inherit;
+          height: inherit;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 2;
+        }
+
+        a.carousel-caption{
+          margin: 150px 130px 0 0;
+          
+          #seeListings{
+            width: 100px;
+            height: 30px;
+            font-size: 12px;
+            font-weight: bolder;
+            background-color: $indicatorFilled;
+            border: 0;
+            border-radius: 15px;
+            box-shadow: 3px 5px 3px rgba(50,50,50,.6);
+          }
+
+          #seeListings:hover, #seeListings:focus{
+            color: $hoveredText;
+            background-color: $indicatorHover;
+            box-shadow: 2px 4px 4px rgba(50,50,50,.6) inset;
+          }
+        }
+      }
+    }
+  }
+}

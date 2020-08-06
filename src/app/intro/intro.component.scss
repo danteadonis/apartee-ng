@@ -1,0 +1,17 @@
+
+#main{
+  width: 100vw;
+  height: 100vh;
+  background-color: #131313;
+
+  img{
+    width: 70px;
+    height: 70px;
+
+    // TO CENTRALIZE
+    position: absolute;
+    top: 50%;
+    left: 45%; // 50% pushes it a little too far to the right.
+    right: 50%;
+  }
+}
