@@ -31,7 +31,7 @@
             <p class="d-flex mt-4">
               <span class="float-left text-danger"><i class="fas fa-circle"></i> NEW</span>
               <span class="float-right ml-auto">
-                <button class="seeDetails">See Details</button>
+                <button type="button" class="seeDetails" data-toggle="modal" data-target="#listingsModal">See Details</button>
               </span>
             </p>
           </div>
@@ -39,6 +39,36 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="listingsModal" tabindex="-1" role="dialog" aria-labelledby="listingsModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Apartment Name</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Apartment Details in full would go here:
+          <br>
+          <ul>
+            <li>Images</li>
+            <li>Description</li>
+            <li>Pricing</li>
+            <li>Location</li>
+            <li>Availability (Booked, Already Rented/Occupeid, or Vacant)</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF MODAL -->
+
   <p class="text-danger mt-2"><b>Lorem ipsum dolor sit amet.</b></p>
   <div class="text-muted">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque?
